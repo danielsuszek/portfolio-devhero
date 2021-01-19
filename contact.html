@@ -60,20 +60,24 @@
                 <form>
                   <ul class="form__rows">
                     <li>
-                      <label for="first-name">Imię</label>
-                      <input type="text" id="first-name" placeholder="Wpisz swoje imię">
+                        <label for="first-name">Imię<span>*</span></label>
+                      <input type="text" id="first-name" placeholder="Wpisz swoje imię" 
+                             maxlength="32" pattern="[a-zA-Z]{1,32}" required>
                     </li>
                     <li>
-                      <label for="email">E-mail</label>
-                      <input type="email" id="email" placeholder="Wpisz adres e-mail">
+                      <label for="email">E-mail<span>*</span></label>
+                      <input type="email" id="email" placeholder="Wpisz adres e-mail" required>
                     </li>
                     <li>
                         <label for="phone">Telefon</label>
-                      <input type="tel" id="phone" placeholder="Wpisz nr telefonu">
+                      <input type="tel" id="phone" placeholder="Wpisz nr telefonu (9 cyfr)" pattern="[0-9]{9}">
                     </li>
                     <li>
-                      <label for="message">Wiadomość</label>
-                      <textarea rows="6" id="message" placeholder="Wpisz wiadomość"></textarea>
+                        <label for="message">Wiadomość<span>*</span></label>
+                      <textarea rows="6" id="message" placeholder="Wpisz wiadomość" required></textarea>
+                    </li>
+                    <li>
+                        <span>* pola wymagane</span>
                     </li>
                     <li>
                         <input type="checkbox" id="agreed">
